@@ -20,7 +20,7 @@ transform = Transform3D(100, 0, 0, 0, 1, 0, 0, 0, 100, 0, 0, 0)
 
 [node name="Player" parent="." instance=ExtResource("1_k5501")]
 transform = Transform3D(-0.939693, 0, -0.34202, 0, 1, 0, 0.34202, 0, -0.939693, -2.00774, 0, -2.73014)
-start_pos = Vector3(-5, 0, -10)
+start_pos = Vector3(-5, 0, -5)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.688355, 0.725374, 0, -0.725374, 0.688355, 0, 53.7122, 68.6044)
