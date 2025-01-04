@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://qi7dbnebp5pb"]
+
+[ext_resource type="PackedScene" uid="uid://biw1wt0xhm2ok" path="res://assets/Models/GLB format/chest.glb" id="1_aqt4j"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="chest2" parent="." instance=ExtResource("1_aqt4j")]

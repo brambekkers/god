@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://cnla4u838k53y"]
+
+[ext_resource type="PackedScene" uid="uid://smphqktty5t5" path="res://assets/Models/GLB format/floor-detail.glb" id="1_yjiix"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="floor-detail" parent="." instance=ExtResource("1_yjiix")]
