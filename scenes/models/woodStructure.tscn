@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://ct5gnwk0tf7tr"]
+
+[ext_resource type="PackedScene" uid="uid://8rtdjyi3kug7" path="res://assets/Models/GLB format/wood-structure.glb" id="1_7ukg0"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="wood-structure2" parent="." instance=ExtResource("1_7ukg0")]

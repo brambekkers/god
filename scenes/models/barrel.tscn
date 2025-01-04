@@ -4,4 +4,4 @@
 
 [node name="Node3D" type="Node3D"]
 
-[node name="barrel2" parent="." instance=ExtResource("1_jd0o6")]
+[node name="barrel" parent="." instance=ExtResource("1_jd0o6")]

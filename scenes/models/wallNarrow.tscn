@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://blepwcn223jcm"]
+
+[ext_resource type="PackedScene" uid="uid://cqb7mdr67wric" path="res://assets/Models/GLB format/wall-narrow.glb" id="1_kmm4o"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="wall-narrow" parent="." instance=ExtResource("1_kmm4o")]
