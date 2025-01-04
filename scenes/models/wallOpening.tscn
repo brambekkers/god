@@ -1,7 +1,27 @@
-[gd_scene load_steps=2 format=3 uid="uid://d15tbfjhirgpl"]
+[gd_scene load_steps=4 format=3 uid="uid://d15tbfjhirgpl"]
 
 [ext_resource type="PackedScene" uid="uid://cxmnn2qaox44q" path="res://assets/Models/GLB format/wall-opening.glb" id="1_7jhoa"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_fk4jl"]
+size = Vector3(1, 0.298889, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_of8vv"]
+size = Vector3(0.1, 1, 1)
 
 [node name="Node3D" type="Node3D"]
 
 [node name="wall-opening2" parent="." instance=ExtResource("1_7jhoa")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="wall-opening2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="wall-opening2/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.850555, 0)
+shape = SubResource("BoxShape3D_fk4jl")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="wall-opening2/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.45, 0.5, 0)
+shape = SubResource("BoxShape3D_of8vv")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="wall-opening2/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.45, 0.5, 0)
+shape = SubResource("BoxShape3D_of8vv")
