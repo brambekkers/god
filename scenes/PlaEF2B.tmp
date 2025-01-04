@@ -8,7 +8,9 @@ height = 1.5
 
 [node name="Player" type="CharacterBody3D"]
 script = ExtResource("1_ir3ke")
-look_sensitivity = 0.008
+move_speed = null
+look_sensitivity = null
+jump_speed = null
 
 [node name="Camera3D" type="Camera3D" parent="."]
 
