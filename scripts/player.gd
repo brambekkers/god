@@ -1,15 +1,18 @@
 extends CharacterBody3D
 
+@export var start_pos: Vector3 = Vector3(0,0,0)
 @export var move_speed: float = 5.0
 @export var look_sensitivity: float = 0.1
 @export var jump_speed: float = 10.0
 
 
-# Reference to the Camera3D node
+# Reference
 @onready var camera = $Camera3D
+@onready var timer = $CanvasLayer/Timer
 
 func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+	position = start_pos
 
 func _process(delta):
 	handle_movement(delta)
@@ -39,7 +42,16 @@ func handle_movement(delta):
 		velocity.y = jump_speed
 
 	# Apply movement
-	move_and_slide()
+	var collision = move_and_slide()
+	for i in get_slide_collision_count():
+		var collision_info = get_slide_collision(i)
+		var collider = collision_info.get_collider()
+		# Check if the collider has the method before calling it
+		if collider.has_method("_on_player_collision"):
+			var type = collider._on_player_collision(collision_info)
+			
+			if type == 'chest':
+				reset_player()
 
 func handle_look():
 	var mouse_delta = Input.get_last_mouse_velocity()
@@ -50,3 +62,7 @@ func handle_look():
 			camera.rotation_degrees.x - mouse_delta.y * look_sensitivity * 0.01,
 			-90, 90
 	)
+
+func reset_player():
+	position = start_pos
+	timer.reset_timer()

@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://l18ka3cf2k8a"]
+[gd_scene load_steps=5 format=3 uid="uid://l18ka3cf2k8a"]
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_ir3ke"]
 [ext_resource type="PackedScene" uid="uid://dh4hgo7anctmr" path="res://assets/Models/GLB format/character-human.glb" id="2_u83wn"]
+[ext_resource type="PackedScene" uid="uid://igoihk6hqgkv" path="res://scripts/Timer.tscn" id="3_iyof7"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_h54v0"]
 radius = 0.1
@@ -21,3 +22,5 @@ shape = SubResource("CapsuleShape3D_h54v0")
 
 [node name="character-human2" parent="." instance=ExtResource("2_u83wn")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0.2)
+
+[node name="CanvasLayer" parent="." instance=ExtResource("3_iyof7")]
