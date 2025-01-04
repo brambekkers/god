@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://caq245l3vd6jk" path="res://assets/Models/GLB format/floor.glb" id="1_uxdeo"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_is5t4"]
-size = Vector3(1, 0.0581665, 1)
+size = Vector3(1, 0.01, 1)
 
 [node name="Node3D" type="Node3D"]
 

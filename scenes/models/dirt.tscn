@@ -1,7 +1,16 @@
-[gd_scene load_steps=2 format=3 uid="uid://rk7y1bm8yxvp"]
+[gd_scene load_steps=3 format=3 uid="uid://rk7y1bm8yxvp"]
 
 [ext_resource type="PackedScene" uid="uid://dvxoa8txo0ds1" path="res://assets/Models/GLB format/dirt.glb" id="1_bs81j"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_21qma"]
+size = Vector3(1, 0.9, 1)
 
 [node name="Node3D" type="Node3D"]
 
 [node name="dirt" parent="." instance=ExtResource("1_bs81j")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.45, 0)
+shape = SubResource("BoxShape3D_21qma")

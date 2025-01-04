@@ -1,16 +1,23 @@
-[gd_scene load_steps=3 format=3 uid="uid://l18ka3cf2k8a"]
+[gd_scene load_steps=4 format=3 uid="uid://l18ka3cf2k8a"]
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_ir3ke"]
+[ext_resource type="PackedScene" uid="uid://dh4hgo7anctmr" path="res://assets/Models/GLB format/character-human.glb" id="2_u83wn"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_h54v0"]
-radius = 0.3
-height = 1.5
+radius = 0.1
+height = 0.7
 
 [node name="Player" type="CharacterBody3D"]
 script = ExtResource("1_ir3ke")
 look_sensitivity = 0.008
+jump_speed = 4.0
 
 [node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.36, 0)
 shape = SubResource("CapsuleShape3D_h54v0")
+
+[node name="character-human2" parent="." instance=ExtResource("2_u83wn")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0.2)
